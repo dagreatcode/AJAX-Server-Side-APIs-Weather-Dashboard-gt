@@ -1,7 +1,11 @@
   // Function for dumping the JSON content for each button into the div
 function displayWeatherInfo {
     var weather = $(this).attr("weather-data");
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=799c442d6353dfbe875ad9803c2b4a75";
+    var city = "Atlanta";
+    var key = "7bb6440e9b152221c42f901d147bdac3";
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + key;
+
+
    //api.openweathermap.org/data/2.5/weather?q={city name},{state code},{country code}&appid={your api key};
    //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
 
