@@ -6,11 +6,17 @@ function displayWeatherInfo
 
 
 
-            $.ajax({
-            url: queryURL,
-            method: "GET"
-            }).then(function(response) {
-            $("#weather-view").text(JSON.stringify(response));
-            });
-        }
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        // $("#weather-view").text(JSON.stringify(response));
+        var tRow = $("<tr>");
+        var weatherEl = $("<td>").text("Weather");
+        var elementEl = $("<td>").text("Element");
+        var nowWeather = $("<td>").text("Now")
+
+        
+        });
+}
 
