@@ -3,7 +3,7 @@ function displayWeatherInfo {
     var weather = $(this).attr("weather-data");
     var city = "Atlanta";
     var key = "7bb6440e9b152221c42f901d147bdac3";
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + key;
+    // var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + key;
 
 
    //api.openweathermap.org/data/2.5/weather?q={city name},{state code},{country code}&appid={your api key};
@@ -32,6 +32,7 @@ function displayWeatherInfo {
             console.log("null");
             $tRow.append(weather,elementEl, nowWeather);
             $("tbody").append(tRow);
+        });
 
 
 
@@ -49,7 +50,7 @@ function displayWeatherInfo {
 
     // Repeat the above logic to add rows for two more movies of your choice
 
-}
+};
 
 /////////////////Just Sudo From the website for JSON
 // {
