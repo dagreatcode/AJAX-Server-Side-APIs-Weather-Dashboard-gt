@@ -20,13 +20,24 @@ function displayWeatherInfo {
     }).then(function(response) {
         console.log(response);
         // $("#weather-view").text(JSON.stringify(response));
+        searchBtn.on("click", function() {
         var tRow = $("<tr>");
         var weatherEl = $("<td>").text("Weather");
         var elementEl = $("<td>").text("Element");
         var nowWeather = $("<td>").text("Now");
+        var searchBtn = $("#search-button");
+        var queryURL ='';
+        // response.response.docs[i].pub_date
+        if (startYear.val() == '' && endYear.val() == '') {
+            console.log("null");
+            $tRow.append(weather,elementEl, nowWeather);
+            $("tbody").append(tRow);
 
-        $tRow.append(weather,elementEl, nowWeather);
-        $("tbody").append(tRow);
+
+
+  
+            queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + key;
+            ajaxFunction(url);
 
 
       // Create and save a reference to new empty table row
